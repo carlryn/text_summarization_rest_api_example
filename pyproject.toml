@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+
+description = "Simple project for text summarizatio with a REST API and HuggingFace Transformers"
+authors = ["Carl Rynegardh, elt12cry@gmail.com"]
+
+
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4.0"
+fastapi = "^0.70.0"
+uvicorn = "^0.15.0"
+pydantic = "^1.8.2"
+transformers = "^4.18.0"
+torch = "^1.11.0"
+SQLAlchemy = "^1.4.36"
+
+[tool.poetry.dev-dependencies]
+black = "^21.9b0"
+isort = "^5.9.3"
+flake8 = "^4.0.1"
+flake8-isort = "^4.1.1"
+flake8-eradicate = "^1.2.0"
+pytest = "^6.2.5"
+requests = "^2.26.0"
+python-dotenv = "^0.19.1"
+click = "8.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+exclude = "pypoetry"
+
+[tool.isort]
+profile = "black"
+skip = ["pypoetry"]
+line_length = 100
